@@ -76,7 +76,6 @@ const authMiddleWare = async(req, res, next) => {
             return res.redirect('/');
         }
         next();
-   
     }
 router.route('/newpassword').get(search).post(search)
 router.route('/forgotpassword').get(update).post(update);
