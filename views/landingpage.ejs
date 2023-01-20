@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main menu</title>
+</head>
+<body>
+    <%-include('./particles/navbar.ejs')%>
+    <header class="block">
+        <ul class="header-menu horizontal-list">
+            <li>
+                <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#3"><span class="icon fontawesome-envelope scnd-font-color"></span>About Us</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#5"><span class="icon fontawesome-star-empty scnd-font-color"></span>Contact Us</a>
+            </li>
+        </ul>
+        <div class="parent-item">
+            <li class="dropdown">
+                <p><button class ="dropbtn" type="button"><div id="user-id" data-user-id="<%= userid %>"></div></button></p>
+                <ul class="nav-dropdown">
+                    <li>
+                      <button class="dropdown-item" type="button">Change Password</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" action="/logout" id="submit" type="button">Log out</button>
+                    </li>
+                </ul>
+            </li> 
+            <div class="profile-picture small-profile-picture">
+                <img width="40px" alt="Anne Hathaway picture" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Anne_Hathaway_Face.jpg">
+                <br>
+            </div>
+        </div>   
+        <br>
+        <div>
+          <br>
+          <br>
+          <br>
+          <h1>Select:</h1>
+          <form id="garden-waste-form" action="/addPoints" method="post">
+            <label for="garden-waste-quantity">Garden waste:</label>
+            <input type="number" id="garden-waste-quantity" name="quantity" min="1" max="10">
+            <input type="hidden" id="garden-waste-points" name="points" value="4">
+            <button type="submit" data-product-name="garden">Add</button>
+          </form>
+            
+          <form id="food-waste-form" action="/addPoints" method="post">
+            <label for="food-waste-quantity">Food waste:</label>
+            <input type="number" id="food-waste-quantity" name="quantity" min="1" max="10">
+            <input type="hidden" id="food-waste-points" name="points" value="5">
+            <button type="submit" data-product-name="food">Add</button>
+          </form>
+          <form id="cartons-form" action="/addPoints" method="post">
+            <label for="cartons-quantity">Food and Drink Cartons:</label>
+            <input type="number" id="cartons-quantity" name="quantity" min="1" max="10">
+            <input type="hidden" id="cartons-points" name="points" value="2">
+            <button type="submit" data-product-name="cartons">Add</button>
+          </form>
+            
+          <form id="plastic-films-form" action="/addPoints" method="post">
+            <label for="plastic-films-quantity">Plastic films:</label>
+            <input type="number" id="plastic-waste-quantity" name="quantity" min="1" max="10">
+            <input type="hidden" id="plastic-waste-points" name="points" value="1">
+            <button type="submit" data-product-name="films">Add</button>
+          </form>
+          <form id="mixed-plastic-form" action="/addPoints" method="post">
+            <label for="mixed-plastic-quantity">Mixed Plastic:</label>
+            <input type="number" id="mixed-plastics-quantity" name="quantity" min="1" max="10">
+            <input type="hidden" id="mixed-plastics-points" name="points" value="1">
+            <button type="submit" data-product-name="mixed">Add</button>
+          </form>
+          
+          <form id="plastic-bottles-form" action="/addPoints" method="post">
+            <label for="plastic-bottles-quantity">Plastic bottles:</label>
+            <input type="number" id="plastic-bottles-quantity" name="quantity" min="1" max="10">
+            <input type="hidden" id="plastic-bottles-points" name="points" value="1">
+            <button type="submit" data-product-name="bottles">Add</button>
+          </form>
+          <form id="glass-form" action="/addPoints" method="post">
+            <label for="glass-quantity">Glass:</label>
+            <input type="number" id="glass-quantity" name="quantity" min="1" max="10">
+            <input type="hidden" id="glass-points" name="points" value="2">
+            <button type="submit" data-product-name="glass">Add</button>
+          </form>
+        
+        <form id="metal-packaging-form" action="/addPoints" method="post">
+          <label for="metal-packaging-quantity">Metal Packaging:</label>
+          <input type="number" id="metal-packaging-quantity" name="quantity" min="1" max="10">
+          <input type="hidden" id="metal-packaging-points" name="points" value="3">
+          <button type="submit" data-product-name="metal">Add</button>
+        </form>
+        <form id="paper-form"action="/addPoints" method="post">
+          <label for="paper-quantity">paper:</label>
+          <input type="number" id="paper-quantity" name="quantity" min="1" max="10">
+          <input type="hidden" id="paper-points" name="points" value="1">
+          <button type="submit" data-product-name="paper">Add</button>
+        </form>
+      
+        <form id="cards-form" action="/addPoints" method="post">
+          <label for="cards-quantity">Cards:</label>
+          <input type="number" id="cards-quantity" name="quantity" min="1" max="10">
+          <input type="hidden" id="cards-points" name="points" value="1">
+          <button type="submit" data-product-name="cards">Add</button>
+        </form>
+      </div> 
+    </header>
+    <script src="js/dropdownmenu.js"></script>
+    <script src="js/landingpage.js"></script>
+  </body>
+</html>

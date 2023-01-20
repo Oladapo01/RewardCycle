@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('./particles/navbar.ejs')%>
+    <header class="block">
+        <ul class="header-menu horizontal-list">
+            <li>
+                <a class="header-menu-tab" href="#1"><span class="icon entypo-cog scnd-font-color"></span>Settings</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#3"><span class="icon fontawesome-envelope scnd-font-color"></span>About Us</a>
+                <a class="header-menu-number" href="#4">5</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#5"><span class="icon fontawesome-star-empty scnd-font-color"></span>Contact Us</a>
+            </li>
+        </ul>
+        <li class="parent-item">
+            <div class="profile-menu">
+                <p><a href="#26"><span class="entypo-down-open scnd-font-color"></span>Me </a></p>
+                <ul class="sub-menu">
+                    <li><a href="#">Change Password</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ul>
+                <div class="profile-picture small-profile-picture">
+                    <img width="40px" alt="Anne Hathaway picture" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Anne_Hathaway_Face.jpg">
+                </div>
+            </div>
+        </li>
+       
+    </header>
+    <%-include('./particles/footer.ejs')%> 
+    <script src="js/loginpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('./particles/navbar.ejs')%>
+    <header class="block">
+        <ul class="header-menu horizontal-list">
+            <li>
+                <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#3"><span class="icon fontawesome-envelope scnd-font-color"></span>About Us</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#5"><span class="icon fontawesome-star-empty scnd-font-color"></span>Contact Us</a>
+            </li>
+        </ul>
+
+        <div class="profile-menu">
+            <li>
+                <p><a href="#26"><span class="entypo-down-open scnd-font-color"></span>Me</a></p>
+                <ul class="nav-dropdown">
+                    <li>
+                      <a href="#">Change Password</a>
+                    </li>
+                    <li>
+                      <a href="#">Log out</a>
+                    </li>
+                </ul>
+            </li> 
+            <div class="profile-picture small-profile-picture">
+                <img width="40px" alt="Anne Hathaway picture" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Anne_Hathaway_Face.jpg">
+                <br>
+            </div>
+        </div>  
+       
+    </header>
+    <div id="cart-page">
+        <h1>My Cart</h1>
+        <table id="cart-table">
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Points</th>
+          </tr>
+        </table>
+        <div id="cart-total">
+          <p>Total:</p>
+          <p id="total-points"></p>
+        </div>
+        <button id="checkout-button">Checkout</button>
+        <button id="continue-shopping-button">Continue Shopping</button>
+      </div>
+      <style>
+        #cart-page {
+          width: 80%;
+          margin: 0 auto;
+        }
+      
+        #cart-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+      
+        #cart-table th, #cart-table td {
+          border: 1px solid black;
+          padding: 10px;
+        }
+      
+        #cart-total {
+          text-align: right;
+          margin-top: 20px;
+        }
+      
+        #checkout-button, #continue-shopping-button {
+          width: 150px;
+          height: 50px;
+          margin-top: 20px;
+        }
+      </style>
+    <script src="js/loginpage.js"></script>
+</body>
+</html>
