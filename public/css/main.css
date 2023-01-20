@@ -22,7 +22,10 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+.parent-item{
+  display:flex;
+  justify-content: space-between;
+}
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
 	font-style: normal;
